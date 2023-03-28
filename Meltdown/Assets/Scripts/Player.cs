@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Damage") {
-            gameManager.remainingHealth--;
+            gameManager.TakeDamage();
+        } else if (other.gameObject.name == "Crystal(Clone)") {
+            gameManager.CollectCrystal();
         }
     }
 }

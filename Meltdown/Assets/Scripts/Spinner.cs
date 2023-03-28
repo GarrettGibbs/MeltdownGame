@@ -10,7 +10,7 @@ public class Spinner : MonoBehaviour
     private float timeElapsed;
     void Update() {
         timeElapsed += Time.deltaTime;
-        increaseAmount = Mathf.Min(timeElapsed / 4, rotationSpeed * 1.75f);
+        increaseAmount = Mathf.Min(timeElapsed / 4, rotationSpeed * .75f);
         transform.RotateAround(transform.position, transform.up, Time.deltaTime * (rotationSpeed + increaseAmount));
     }
 }
